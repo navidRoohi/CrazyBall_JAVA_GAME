@@ -1,4 +1,4 @@
 # CrazyBall_JAVA_GAME
 This is my first JAVA game project. 
 
-![crazyball](https://cloud.githubusercontent.com/assets/13104724/11707159/4cdea648-9eb5-11e5-9245-b5e349fc9b04.png)
+(https://cloud.githubusercontent.com/assets/13104724/11707169/7a9a7a30-9eb5-11e5-9f8c-8eeadf3aa02c.png)
