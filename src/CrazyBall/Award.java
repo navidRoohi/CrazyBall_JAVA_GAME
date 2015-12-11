@@ -85,8 +85,8 @@ public class Award {
     
      public void paint(Graphics g) {
          
-         Font font = new Font("Serif", Font.BOLD, 12);
-         g.setFont(font);
+         Font font2 = new Font("Serif", Font.BOLD, 12);
+         g.setFont(font2);
 
          g.setColor(Color.YELLOW);
          g.drawString("Award", x-3 , y- 10);
