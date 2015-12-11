@@ -18,14 +18,14 @@ import java.util.Random;
 public class Rain {
     int dx, dy;
     int x, y, radius;
-    private CrazyBall sp;
+    private CrazyBall main;
     
     public Rain(){
-        x= 300;
+        x= 0;
         y= 300;
         radius = 10;
         dx = -2;
-        dy = -1;
+        dy = 1;
     }
 
     public int getY() {
@@ -39,22 +39,22 @@ public class Rain {
     public Rain(int y){
         this.y = y;
         Random r =  new Random();
-        x = r.nextInt(400)+radius;
+        x = r.nextInt(800);
         radius = 10;
-        dy = -2;
+        dy = 1;
         dx = -2;
    
        
     }
-    public void update(CrazyBall sp){
+    public void update(CrazyBall main){
 
         y += dy ;
-        this.sp = sp;
+        this.main = main;
         Random r = new Random();
          
-        if (y < 0 - radius){
+        if (y > main.getHeight() - radius){
            
-            x = sp.getHeight() + 2000 + r.nextInt(300);
+            y =  2000 + r.nextInt(300);
         }
 
     }
@@ -64,7 +64,7 @@ public class Rain {
          
 
          g.setColor(Color.BLUE);
-         g.fillOval(x - radius, y - radius, 5, 5);
+         g.fillOval(x - radius, y - radius, 3, 10);
 
     }
      
