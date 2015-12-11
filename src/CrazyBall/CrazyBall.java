@@ -35,7 +35,7 @@ public class CrazyBall extends Applet implements Runnable, KeyListener {
     Floor[] floor = new Floor[10];
     Award item[] = new Award[10];
     Enemy enemy[] = new Enemy[5];
-    Rain rain[] = new Rain[100];
+    Rain rain[] = new Rain[50];
 
     public static int score;
 
@@ -99,7 +99,7 @@ public class CrazyBall extends Applet implements Runnable, KeyListener {
             enemy[i] = new Enemy(getWidth() + 200 * i, enemyImage);
         }
         for (int i = 0; i < rain.length; i++) {
-            rain[i] = new Rain(getHeight() + 200 * i);
+            rain[i] = new Rain(10 * i );
         }
 
         Thread thread = new Thread(this);
@@ -149,6 +149,12 @@ public class CrazyBall extends Applet implements Runnable, KeyListener {
             }
             for (int i = 0; i < rain.length; i++) {
                 rain[i].update(this);
+                
+                if (rain[i].getY() > getHeight()){
+                    rain[i].setY(i);
+                }
+                
+                
             }
 
             repaint();
