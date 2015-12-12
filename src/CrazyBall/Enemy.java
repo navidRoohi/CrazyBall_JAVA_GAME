@@ -113,9 +113,6 @@ public class Enemy {
              
              
          }
-         
-         
-
 
     }
 }
